@@ -1,0 +1,62 @@
+{
+  "name": "use-scheduled",
+  "version": "0.1.0",
+  "description": "React hook to handle deferring activities for a later time - once or recurring.",
+  "author": "James Ward <james@notjam.es>",
+  "license": "MIT",
+  "keywords": [
+    "react-hooks",
+    "react",
+    "hooks",
+    "utils",
+    "interval"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imnotjames/use-interval.git"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "source": "src/index.js",
+  "files": [
+    "dist/**/*.js",
+    "src/**/*.js",
+    "!src/**/*.test.js"
+  ],
+  "scripts": {
+    "prepack": "npm run build",
+    "test": "jest",
+    "lint": "eslint src",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:cjs": "npm run compile -- -d dist/cjs --env-name cjs",
+    "build:esm": "npm run compile -- -d dist/esm --env-name esm",
+    "compile": "babel src -x .js,.jsx --ignore \"**/*.test.js\",\"**/*.test.jsx\" --delete-dir-on-start"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@testing-library/react-hooks": "^3.2.1",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^7.1.0",
+    "eslint-config-semistandard": "^15.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard-jsx": "^8.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.13.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.2",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  }
+}
