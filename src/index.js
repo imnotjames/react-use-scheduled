@@ -116,7 +116,7 @@ export default function useScheduled (
         // and woke up much later.
 
         // Add this entry to the queue.
-        queue.current.push({ when : nextTimeout });
+        queue.current.push({ when: nextTimeout });
 
         // Setting this will effectively fire off the next timeout.
         setLastTimeout(nextTimeout);

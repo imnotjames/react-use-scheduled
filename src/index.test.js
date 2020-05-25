@@ -107,7 +107,7 @@ describe('useScheduled', () => {
     let delay = 500;
 
     const { rerender } = renderHook(() => {
-      useScheduled(handler, delay, { deadline: Infinity});
+      useScheduled(handler, delay, { deadline: Infinity });
     });
 
     await act(async () => jest.advanceTimersByTime(1000));
@@ -159,7 +159,7 @@ describe('useScheduled', () => {
 
   test('if you change concurrency via `allowConcurrency` while running it should take effect', async () => {
     const handler = jest.fn()
-        .mockImplementationOnce(async () => new Promise((resolve) => setTimeout(resolve, 5000)));
+      .mockImplementationOnce(async () => new Promise((resolve) => setTimeout(resolve, 5000)));
 
     let allowConcurrent = false;
 
